@@ -56,3 +56,14 @@ B. jaring pengaman untuk alur Batal Menyukai Restoran
     4. Film dihapus dari daftar film yang disukai.
         - Ternyata film tidak ada dalam daftar film yang disukai.
         - Tidak ada kegagalan.
+
+
+// END TO END TESTING
+mensimulasikan aktifitas pengguna menyukai sebuah resto. 
+    1. Buka halaman utama
+    2. Pilih salah satu resto, misalnya resto pertama
+    3. Click resto tersebut
+    4. Aplikasi membawa kita ke halaman detail resto
+    5. Kita menekan tombol menyukai resto
+    6. Kita buka halaman daftar resto yang disukai
+    7. Kita melihat resto yang telah disukai

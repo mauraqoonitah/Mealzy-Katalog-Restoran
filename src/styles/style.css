@@ -542,6 +542,14 @@ main {
     justify-content: center;
 }
 
+.favresto-content-not-found {
+    text-align: center;
+    color: #d61515;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-family: 'Caveat', cursive;
+}
+
 
 /*
     Footer
