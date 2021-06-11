@@ -1,5 +1,6 @@
 // integration test -> memerhatikan bagaimana dampak dari tes terhadap semua objek yang terlibat
 
+A. jaring pengaman untuk alur Menyukai Restoran
 
 Bila resto ini belum disukai, tampilkan widget untuk menyukai resto. Widget ini berbentuk hati kosong.
 
@@ -46,3 +47,12 @@ TODO:
     - Sistem tidak gagal
 
 [Alur negatif menyimpan restoran tanpa ID tidak boleh menyebabkan kegagalan]
+
+
+B. jaring pengaman untuk alur Batal Menyukai Restoran
+    1. Film sudah disukai.
+    2. Widget untuk batal menyukai film ditampilkan.
+    3. Widget pembatalan ditekan oleh pengguna.
+    4. Film dihapus dari daftar film yang disukai.
+        - Ternyata film tidak ada dalam daftar film yang disukai.
+        - Tidak ada kegagalan.

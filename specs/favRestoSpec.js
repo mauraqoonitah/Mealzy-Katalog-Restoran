@@ -1,7 +1,7 @@
 import FavoButtonInitiator from '../src/scripts/utils/favo-button-initiator';
 import FavoriteRestoIdb from '../src/scripts/data/favoriteresto-idb';
 
-describe('Favorite Restoran', () => {
+describe('Menyukai Restoran', () => {
     const addFavButtonContainer = () => {
         document.body.innerHTML = '<div id="favoButtonContainer"></div>';
     };
@@ -11,7 +11,7 @@ describe('Favorite Restoran', () => {
     });
 
 
-    it('harus menampilkan tombol favorite ketika restoran belum di favorite sebelumnya', async() => {
+    it('menampilkan tombol favorite ketika restoran belum di favorite sebelumnya', async() => {
         await FavoButtonInitiator.init({
             favoButtonContainer: document.querySelector('#favoButtonContainer'),
             restaurant: {
