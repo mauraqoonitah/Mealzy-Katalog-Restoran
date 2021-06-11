@@ -56,4 +56,35 @@ describe('Favorite Restoran', () => {
 
         FavoriteRestoIdb.deleteResto(1);
     });
+
+    it('tidak menambah fav restoran lagi ketika sudah difavoritkan', async() => {
+        await FavoButtonInitiator.init({
+            favoButtonContainer: document.querySelector('#favoButtonContainer'),
+            restaurant: {
+                id: 1,
+            },
+        });
+
+        // Tambahkan restoran dengan ID 1 ke daftar restoran yang disukai
+        await FavoriteRestoIdb.putResto({ id: 1 });
+        // Simulasikan pengguna menekan tombol fav restoran
+        document.querySelector('#favoButton').dispatchEvent(new Event('click'));
+        // tidak ada restoran yang dobel
+        expect(await FavoriteRestoIdb.getAllRestos()).toEqual([{ id: 1 }]);
+
+        FavoriteRestoIdb.deleteResto(1);
+    });
+
+    // menggunakan metode xit, bukan it
+    xit('tidak menambahkan restoran favorite ketika dia tidak memiliki id', async() => {
+        await FavoButtonInitiator.init({
+            favoButtonContainer: document.querySelector('#favoButtonContainer'),
+            //kosongkan, karna tidak memiliki id
+            restaurant: {},
+        });
+
+        document.querySelector('#favoButton').dispatchEvent(new Event('click'));
+
+        expect(await FavoriteRestoIdb.getAllRestos()).toEqual([]);
+    });
 });

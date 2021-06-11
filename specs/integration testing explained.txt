@@ -28,16 +28,21 @@ Bila resto sudah disukai, tampilkan widget berbentuk hati penuh. Pengguna dapat 
 [mengubah perubahan penamaan kode pada testing, tanpa melakukan perubahan terhadap kode yang sudah ada] :
 
 TODO:
-    Memberi nama yang lebih berbeda untuk createFavoriteButtonTemplate dan createFavoritedButtonTemplate
-	
-	
-	
+    - Memberi nama yang lebih berbeda untuk createFavoriteButtonTemplate dan createFavoritedButtonTemplate
+		
 [menguji tahapan pengguna menekan widget favori dan restoran tersimpn di daftar restoran favorite] :
    1. Mensimulasikan widget ditekan, dengan dispatchEvent.
    Setelah membangkitkan event click, maka asumsinya, restoran tersimpan di FavoriteRestoIdb.
    Untuk menguji apakah resto tersimpan, kita dapat memanfaatkan getResto 
    2. Memeriksa apakah restoran memang disimpan
    
-
-
    
+[menguji skenario negatif : Ternyata film sudah disukai] : 
+   - bila restoran sudah berada di dalam daftar restoran yang disukai, maka tidak perlu menambahkannya kembali.
+   - Untuk memeriksa ini, maka kita bisa menggunakan metode getAllResto yang telah disediakan oleh FavoriteRestoIdb
+
+[Data film memiliki ID] :
+    - Sistem tidak memproses penyimpanan
+    - Sistem tidak gagal
+
+[Alur negatif menyimpan restoran tanpa ID tidak boleh menyebabkan kegagalan]
