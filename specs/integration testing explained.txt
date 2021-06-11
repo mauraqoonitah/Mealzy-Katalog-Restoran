@@ -1,0 +1,43 @@
+// integration test -> memerhatikan bagaimana dampak dari tes terhadap semua objek yang terlibat
+
+
+Bila resto ini belum disukai, tampilkan widget untuk menyukai resto. Widget ini berbentuk hati kosong.
+
+Bila resto sudah disukai, tampilkan widget berbentuk hati penuh. Pengguna dapat membatalkan kesukaannya pada resto ini.
+
+[Skenario Menyukai Resto]:
+    1. Resto belum disukai.
+    2. Widget untuk menyukai Resto ditampilkan
+    3. Widget menyukai Resto ditekan oleh pengguna.
+    4. Resto ditambahkan ke daftar Resto yang disukai:
+        - Ternyata Resto sudah disukai:
+            Tidak perlu menyimpan kembali.
+        - Data Resto tidak memiliki ID:
+            Sistem tidak memproses penyimpanan.
+            SIstem tidak gagal.
+
+[Skenario Batal Menyukai Resto] :
+
+    1. Resto sudah disukai.
+    2. Widget untuk batal menyukai Resto ditampilkan.
+    3. Widget pembatalan ditekan oleh pengguna.
+    4. Resto dihapus dari daftar Resto yang disukai:
+        - Ternyata Resto tidak ada dalam daftar Resto yang disukai.
+		
+		
+[mengubah perubahan penamaan kode pada testing, tanpa melakukan perubahan terhadap kode yang sudah ada] :
+
+TODO:
+    Memberi nama yang lebih berbeda untuk createFavoriteButtonTemplate dan createFavoritedButtonTemplate
+	
+	
+	
+[menguji tahapan pengguna menekan widget favori dan restoran tersimpn di daftar restoran favorite] :
+   1. Mensimulasikan widget ditekan, dengan dispatchEvent.
+   Setelah membangkitkan event click, maka asumsinya, restoran tersimpan di FavoriteRestoIdb.
+   Untuk menguji apakah resto tersimpan, kita dapat memanfaatkan getResto 
+   2. Memeriksa apakah restoran memang disimpan
+   
+
+
+   
