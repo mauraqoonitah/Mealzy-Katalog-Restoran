@@ -58,9 +58,9 @@ h3 {
     color: #d61515;
     padding: 20px;
 }
-.mealzy-a{
+
+.mealzy-a {
     padding: 15px 0 15px 0;
- 
 }
 
 .sub_title {
@@ -97,7 +97,6 @@ h3 {
     background-color: #d615152e;
     font-size: 12px;
 }
-
 
 .card {
     padding: 5px 0;
@@ -193,7 +192,9 @@ h3 {
     background-size: cover;
     background-blend-mode: darken;
     background-position: center;
-    height: 70vh;
+    height: 270px;
+    object-fit: cover;
+    object-position: center;
     width: 100%;
     display: grid;
     justify-content: center;
@@ -560,6 +561,8 @@ footer p a {
     color: #d61515;
     text-decoration: none;
 }
+
+
 /* skip to content */
 
 .skip-link {
@@ -573,11 +576,10 @@ footer p a {
     list-style: none;
 }
 
- 
 .skip-link:focus {
     top: 0;
 }
- 
+
 .skip-link:hover {
     background-color: blanchedalmond;
     color: black;

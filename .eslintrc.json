@@ -17,6 +17,8 @@
         "import/no-extraneous-dependencies": 0,
         "no-unused-vars": 0,
         "no-underscore-dangle": 0,
-        "no-restricted-globals": 0
+        "no-restricted-globals": 0,
+        "indent" : 0,
+        "eol-last" : 0
     }
 }

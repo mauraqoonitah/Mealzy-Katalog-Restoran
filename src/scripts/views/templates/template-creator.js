@@ -5,7 +5,7 @@ import CONFIG from '../../globals/config';
 const createRestoDetailTemplate = (restaurant) => `
 <img class="resto_img" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}"  tabindex="0"/>
 <div class="resto_detail">
-    <h2 class="mealzy mbtm-2" tabindex="0">${restaurant.name}</h2>
+    <h1 class="mealzy mbtm-2" tabindex="0">${restaurant.name}</h1>
     <p class="mbtm-2">
         ${restaurant.categories.map((category) => `
         <p class="detail_categories" tabindex="0">${category.name}</p>
@@ -16,7 +16,7 @@ const createRestoDetailTemplate = (restaurant) => `
 </div>
 <div class="resto__overview">
     <p class="mtop-20 resto_detail_description" tabindex="0">${restaurant.description}</p>
-    <h4 class= "sub_title_menu" tabindex="0"> Menu </h4>
+    <h2 class= "sub_title_menu" tabindex="0"> Menu </h2>
     <div class="tab-container">
         <div class="tab ">
             <i class="fas fa-utensils"></i>

@@ -1,9 +1,21 @@
-# restaurant-catalogue
-Mengembangkan kembali web app Katalog Restoran (https://github.com/mauraqoonitah/restaurant-apps) hingga menjadi Progressive Web Apps. 
+# Mealzy (restaurant-catalogue)
 
-Menggunakan ESLint sebagai linter ketika menuliskan kode JavaScript, Membuat website dengan arsitektur Application Shell, 
-Menerapkan Web App Manifest,
-Menerapkan Service Worker, 
-Menerapkan Cache API pada Service Worker, 
-Menggunakan IndexedDB untuk menyimpan data dalam bentuk objek, 
-Menerapkan WebSocket dan Notification.
+- Using ESLint as a linter when writing JavaScript code, Creating websites with Application Shell architecture
+- Implement the Web App Manifest
+- Implement Service Workers
+- Implement Cache API on Service Workers
+- Using IndexedDB to store data in object form
+- Implement WebSocket and Notification
+- Implement Dicoding API: https://restaurant-api.dicoding.dev/
+
+## Tools used:
+
+> - Text Editor VSCode
+> - Google Chrome Web Browser.
+> - Web Server for Chrome.
+> - Terminal.
+
+## Screenshot Mealzy Restaurant Catalogue
+
+<img src="Screenshot Mealzy 1.jpg" width="700" />
+<img src="Screenshot Mealzy 2.jpg" width="700" />
