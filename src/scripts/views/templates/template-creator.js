@@ -3,7 +3,7 @@
 import CONFIG from '../../globals/config';
 
 const createRestoDetailTemplate = (restaurant) => `
-<img class="resto_img" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}"  tabindex="0"/>
+<img class="lazyload resto_img" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}"  tabindex="0"/>
 <div class="resto_detail">
     <h1 class="mealzy mbtm-2" tabindex="0">${restaurant.name}</h1>
     <p class="mbtm-2">
@@ -66,7 +66,7 @@ const createRestoItemTemplate = (restaurants) => `
     <div class="hovereffect">
         <div class="resto-item">
             <div class="resto-item__header  hovering">
-                <img class="resto-item__header__poster" crossorigin="anonymous"  tabindex="0" src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
+                <img class="lazyload resto-item__header__poster" crossorigin="anonymous"  tabindex="0" src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
 
             </div>
             <div class="resto-item__content">

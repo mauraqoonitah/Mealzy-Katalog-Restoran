@@ -4,24 +4,27 @@ import '../styles/style.css';
 import '../styles/responsive.css';
 import App from './views/app';
 import swRegister from './utils/sw-register';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+
 
 const app = new App({
-  button: document.querySelector('#hamburgerButton'),
-  drawer: document.querySelector('#navigationDrawer'),
-  content: document.querySelector('#mainContent'),
+    button: document.querySelector('#hamburgerButton'),
+    drawer: document.querySelector('#navigationDrawer'),
+    content: document.querySelector('#mainContent'),
 });
 
 window.addEventListener('hashchange', () => {
-  app.renderPage();
+    app.renderPage();
 });
 
 window.addEventListener('load', () => {
-  app.renderPage();
-  swRegister();
+    app.renderPage();
+    swRegister();
 });
 
 function preLoader() {
-  const preLoader = `
+    const preLoader = `
     <div class="preloader-wrapper big active" style="position: relative; left: calc(50% - 30px); top:50%;">
     <div class="spinner-layer spinner-green-only">
       <div class="circle-clipper left">
@@ -36,5 +39,5 @@ function preLoader() {
     </div>
   </div>
   `;
-  document.getElementById('preLoader').innerHTML = preLoader;
+    document.getElementById('preLoader').innerHTML = preLoader;
 }
