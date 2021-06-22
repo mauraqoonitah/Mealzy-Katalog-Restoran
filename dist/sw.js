@@ -4,12 +4,12 @@ var serviceWorkerOption = {
     "/bundle.js",
     "/favicon.png",
     "/manifest.json",
-    "/images/hero-image_2.jpg",
-    "/images/userpic.png",
     "/icons/icon-192x192.png",
     "/icons/icon-256x256.png",
     "/icons/icon-384x384.png",
     "/icons/icon-512x512.png",
+    "/images/hero-image_2.jpg",
+    "/images/userpic.png",
     "/index.html"
   ]
 };
