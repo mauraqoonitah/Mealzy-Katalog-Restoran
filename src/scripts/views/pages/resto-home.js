@@ -2,9 +2,19 @@ import RestoDbSource from '../../data/restodb-source';
 import { createRestoItemTemplate } from '../templates/template-creator';
 
 const RestoHome = {
-  async render() {
-    return `
+    async render() {
+        return `
         <div class="jumbotron">
+        <picture>
+
+        <source media="(max-width: 600px)" srcset="./images/hero-image_2-large.jpg">
+        <source media="(max-width: 600px)" srcset="./images/hero-image_2-small.jpg">
+
+          <img 
+          src="./images/hero-image_2-large.jpg" alt="hero small"
+          </img>
+
+        </picture>
             <div class="hero">
                 <h1  class="hero-title">Mealzy</h1>
                 <p class="hero-tag">mau makan dimana hari ini?</p>
@@ -20,15 +30,15 @@ const RestoHome = {
         </div>
 
         `;
-  },
+    },
 
-  async afterRender() {
-    const resto = await RestoDbSource.homeResto();
-    const restoContainer = document.querySelector('#restos');
-    resto.forEach((restaurants) => {
-      restoContainer.innerHTML += createRestoItemTemplate(restaurants);
-    });
-  },
+    async afterRender() {
+        const resto = await RestoDbSource.homeResto();
+        const restoContainer = document.querySelector('#restos');
+        resto.forEach((restaurants) => {
+            restoContainer.innerHTML += createRestoItemTemplate(restaurants);
+        });
+    },
 
 };
 
