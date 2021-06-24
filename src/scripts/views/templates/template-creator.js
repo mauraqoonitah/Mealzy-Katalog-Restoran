@@ -44,7 +44,17 @@ const createRestoDetailTemplate = (restaurant) => `
         ${restaurant.customerReviews.map((review) => `
         <div class="border">
             <div class="">
-                <img class="userpic" crossorigin="anonymous" src="./images/userpic.png" alt="userpic">
+
+            <picture>
+
+            <source media="(max-width: 600px)" srcset="./images/userpic-small.jpg">
+    
+              <img 
+              class="userpic" crossorigin="anonymous" src="./images/userpic.png" alt="hero"
+              </img>
+    
+            </picture>
+
             </div>
             <div class="">
                 <p class="customer_date date" tabindex="0">${review.date}</p>
@@ -66,8 +76,10 @@ const createRestoItemTemplate = (restaurants) => `
     <div class="hovereffect">
         <div class="resto-item">
             <div class="resto-item__header  hovering">
-                <img class="lazyload resto-item__header__poster" crossorigin="anonymous"  tabindex="0" src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
-
+                <img class="lazyload resto-item__header__poster"  lazyload" width="100%" height="350px" src="../images/placeholder.png" alt="${restaurants.name}"
+                data-src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}"
+                crossorigin="anonymous" tabindex="0"
+                />
             </div>
             <div class="resto-item__content">
                 <h3 class="text-center hovering"  tabindex="0"><a href="${`/#/detail/${restaurants.id}`}" class="mealzy-a" tabindex="0" >${restaurants.name}</a></h3>
@@ -83,6 +95,31 @@ const createRestoItemTemplate = (restaurants) => `
     </div>
 `;
 
+const createSkeletonRestoTemplate = (count) => {
+let template = '';
+
+for (let i = 0; i < count; i += 1){
+    template += `
+    <div class="hovereffect">
+    <div class="resto-item">
+
+        <div class="resto-item__header hovering">
+            <img class="resto-item__header__poster" width="100%" height="350px" src="../images/placeholder.png" alt ="skeleton" />
+        </div>
+
+        <div class="resto-item__content">
+         <h3 class="skeleton">Lorem ipsum dolor sit.</h3>
+         <p>SkeletonLorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
+        </div>
+    </div>
+</div>
+`;
+}
+return template;
+};
+
+
+
 const createFavoriteButtonTemplate = () => `
   <button aria-label="your fav resto" id="favoButton" class="favo">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -95,10 +132,13 @@ const createFavoritedButtonTemplate = () => `
   </button>
 `;
 
+
+
 export {
   createRestoDetailTemplate,
   createRestoItemTemplate,
   createFavoriteButtonTemplate,
   createFavoritedButtonTemplate,
+  createSkeletonRestoTemplate
 
 };

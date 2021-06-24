@@ -1,5 +1,8 @@
 import RestoDbSource from '../../data/restodb-source';
-import { createRestoItemTemplate } from '../templates/template-creator';
+import {
+    createRestoItemTemplate,
+    createSkeletonRestoTemplate,
+} from '../templates/template-creator';
 
 const RestoHome = {
     async render() {
@@ -26,6 +29,7 @@ const RestoHome = {
             <p class="text-center text-grey"  tabindex="0"><i>Coba rekomendasi dari kami, nih.</i></p>
         
             <div id="restos" class="restos">
+            ${createSkeletonRestoTemplate(20)}
             </div>
         </div>
 
@@ -35,6 +39,7 @@ const RestoHome = {
     async afterRender() {
         const resto = await RestoDbSource.homeResto();
         const restoContainer = document.querySelector('#restos');
+        restoContainer.innerHTML = '';
         resto.forEach((restaurants) => {
             restoContainer.innerHTML += createRestoItemTemplate(restaurants);
         });

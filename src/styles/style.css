@@ -275,6 +275,12 @@ main {
     Restos Item
   */
 
+.skeleton {
+    user-select: none;
+    background-color: #d11010;
+    color: #eeeeee;
+}
+
 .resto-item {
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -288,6 +294,10 @@ main {
 
 .resto-item .resto-item__header .resto-item__header__poster {
     width: 100%;
+    object-position: center;
+    object-fit: cover;
+    min-width: 100%;
+    height: 250px;
 }
 
 .resto-item .resto-item__header .resto-item__header__rating {
@@ -570,6 +580,8 @@ footer {
 footer p {
     text-align: center;
     color: #aaaaaa;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 footer p a {
