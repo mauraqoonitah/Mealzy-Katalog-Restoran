@@ -98,7 +98,7 @@ const createRestoItemTemplate = (restaurants) => `
 const createSkeletonRestoTemplate = (count) => {
 let template = '';
 
-for (let i = 0; i < count; i += 1){
+for (let i = 0; i < count; i += 1) {
     template += `
     <div class="hovereffect">
     <div class="resto-item">
@@ -118,8 +118,6 @@ for (let i = 0; i < count; i += 1){
 return template;
 };
 
-
-
 const createFavoriteButtonTemplate = () => `
   <button aria-label="your fav resto" id="favoButton" class="favo">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -132,13 +130,11 @@ const createFavoritedButtonTemplate = () => `
   </button>
 `;
 
-
-
 export {
   createRestoDetailTemplate,
   createRestoItemTemplate,
   createFavoriteButtonTemplate,
   createFavoritedButtonTemplate,
-  createSkeletonRestoTemplate
+  createSkeletonRestoTemplate,
 
 };

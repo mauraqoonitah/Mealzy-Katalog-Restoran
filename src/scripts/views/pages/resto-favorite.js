@@ -22,14 +22,13 @@ const RestoFavorite = {
     async afterRender() {
         const resto = await FavoriteRestoIdb.getAllRestos();
         if (resto.length === 0) {
-            document.querySelector('.favresto-content-not-found').innerHTML = 'Belum ada restoran yang kamu favoritkan &#128533;'
+            document.querySelector('.favresto-content-not-found').innerHTML = 'Belum ada restoran yang kamu favoritkan &#128533;';
         } else {
             const restoContainer = document.querySelector('#restos');
             resto.forEach((restaurants) => {
                 restoContainer.innerHTML += createRestoItemTemplate(restaurants);
             });
         }
-
     },
 
 };

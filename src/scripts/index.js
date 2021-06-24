@@ -7,7 +7,6 @@ import swRegister from './utils/sw-register';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
-
 const app = new App({
     button: document.querySelector('#hamburgerButton'),
     drawer: document.querySelector('#navigationDrawer'),
