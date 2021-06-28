@@ -4,7 +4,7 @@ const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
     entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -25,21 +25,21 @@ module.exports = {
             cacheGroups: {
                 defaultVendors: {
                     test: /[\\/]node_modules[\\/]/,
-                    priority: -10
+                    priority: -10,
                 },
                 default: {
                     minChunks: 2,
                     priority: -20,
-                    reuseExistingChunk: true
-                }
-            }
-        }
+                    reuseExistingChunk: true,
+                },
+            },
+        },
     },
     module: {
         rules: [{
                 test: /.jsx?$/,
                 loader: 'babel-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
             },
             {
                 test: /\.css$/,
@@ -53,8 +53,8 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
-                loader: 'url-loader?limit=100000'
-            }
+                loader: 'url-loader?limit=100000',
+            },
         ],
     },
     plugins: [
@@ -69,7 +69,7 @@ module.exports = {
                 globOptions: {
                     ignore: ['**/images/**'], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
                 },
-            }, ],
+            }],
         }),
         new ServiceWorkerWebpackPlugin({
             entry: path.resolve(__dirname, 'src/scripts/sw.js'),
@@ -82,6 +82,9 @@ module.exports = {
                 }),
             ],
         }),
-        // new BundleAnalyzerPlugin(),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            openAnalyzer: false,
+        }),
     ],
 };

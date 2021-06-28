@@ -76,7 +76,7 @@ const createRestoItemTemplate = (restaurants) => `
     <div class="hovereffect">
         <div class="resto-item">
             <div class="resto-item__header  hovering">
-                <img class="lazyload resto-item__header__poster"  lazyload" width="100%" height="350px" src="../images/placeholder.png" alt="${restaurants.name}"
+                <img class="lazyload resto-item__header__poster"  lazyload" width="100%" height="350px" src="../images/placeholder-small.jpg" alt="${restaurants.name}"
                 data-src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}"
                 crossorigin="anonymous" tabindex="0"
                 />
@@ -104,12 +104,12 @@ for (let i = 0; i < count; i += 1) {
     <div class="resto-item">
 
         <div class="resto-item__header hovering">
-            <img class="resto-item__header__poster" width="100%" height="350px" src="../images/placeholder.png" alt ="skeleton" />
+            <img class="resto-item__header__poster" width="100%" height="350px" src="../images/placeholder-small.jpg" alt ="skeleton" />
         </div>
 
         <div class="resto-item__content">
-         <h3 class="skeleton">Lorem ipsum dolor sit.</h3>
-         <p>SkeletonLorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
+         <h3 class="skeleton">-------</h3>
+         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis....</p>
         </div>
     </div>
 </div>
